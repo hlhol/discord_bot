@@ -1,5 +1,6 @@
 require('dotenv').config();
 const { Client, IntentsBitField } = require('discord.js');
+const keep = require("./server");
 
 const client = new Client({
     intents: [
@@ -26,4 +27,5 @@ client.on('messageCreate', (message) => {
   
 });
 
+keep();
 client.login();
